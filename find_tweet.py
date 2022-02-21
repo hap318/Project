@@ -14,8 +14,8 @@ def find_tweet(keyword):
     tweets = tweepy.Cursor(api.search, q=keyword, lang='en').items(1)
     for tweet in tweets:
         print(tweet.text)
-        print(tweet.id)
         print('https://twitter.com/twitter/statuses/{id}'.format(id = tweet.id))
+        print("\n")
 
 while True:
     find_tweet(input("enter key word: "))

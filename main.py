@@ -10,11 +10,10 @@ authenticator = tweepy.OAuthHandler(api_key, api_key_secret)
 authenticator.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(authenticator)
-api.verify_credentials
 
-user = api.get_user("_Eposs")
+user_get = input("Enter user: ")
 
-users = tweepy.Cursor(api.friends, "_Eposs").items()
+users = tweepy.Cursor(api.friends, user_get, count=200).items()
 
 while True:
     try:
@@ -25,5 +24,3 @@ while True:
     except StopIteration:
         break
     print("@" + user.screen_name)
-
-#api.update_status("@_Eposs wagwan")

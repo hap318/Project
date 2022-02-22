@@ -1,5 +1,5 @@
 import tweepy
-import time
+
 all_keys = open("C:/Users/Henry/Desktop/twitter2.txt", 'r').read().split()
 api_key = all_keys[0]
 api_key_secret = all_keys[1]
@@ -11,7 +11,7 @@ authenticator.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(authenticator)
 def find_tweet(keyword):
-    tweets = tweepy.Cursor(api.search, q=keyword, lang='en').items(1)
+    tweets = tweepy.Cursor(api.search, q=keyword, lang='en').items(3)
     for tweet in tweets:
         print(tweet.text)
         print('https://twitter.com/twitter/statuses/{id}'.format(id = tweet.id))

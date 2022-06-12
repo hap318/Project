@@ -8,6 +8,9 @@ def get_crypto_price(symbol):
     price = raw['price']
     return float(price)
 
+def test():
+    pass
+
 while True:
     btc = get_crypto_price('btcusd')
     print('Price of 1 Bitcoin: {} USD'.format(btc))

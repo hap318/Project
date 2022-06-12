@@ -1,6 +1,6 @@
 import tweepy
 import time
-all_keys = open("C:/Users/Henry/Desktop/twitter2.txt", 'r').read().split()
+all_keys = open("C:/Users/Henry/Desktop/Files/twitter2.txt", 'r').read().split()
 api_key = all_keys[0]
 api_key_secret = all_keys[1]
 access_token = all_keys[2]
